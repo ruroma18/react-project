@@ -8,9 +8,13 @@ import Header from "./components/Header";
 const App = () => {
   const [theme, setTheme] = useState(CONSTANTS.THEME.LIGHT);
 
+  function changeTheme({ target: { value } }) {
+    setTheme(value);
+  }
+
   return (
     <div>
-      <ThemeContext.Provider value={[theme, setTheme]}>
+      <ThemeContext.Provider value={[theme, changeTheme]}>
         <Header />
       </ThemeContext.Provider>
     </div>

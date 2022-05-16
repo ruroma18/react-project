@@ -5,11 +5,7 @@ import cx from "classnames";
 import CONSTANTS from "../../constants";
 
 const Header = () => {
-  const [theme, setTheme] = useContext(ThemeContext);
-
-  function changeTheme({ target: { value } }) {
-    setTheme(value);
-  }
+  const [theme, changeTheme] = useContext(ThemeContext);
 
   const headerStyles = cx(styles.headerContainer, {
     [styles.lightTheme]: theme === CONSTANTS.THEME.LIGHT,
