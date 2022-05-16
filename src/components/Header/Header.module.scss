@@ -1,0 +1,26 @@
+@import "./../../common/styles/template";
+
+.headerContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+.btnContainer {
+  display: flex;
+}
+
+.themeBtn {
+  margin: 5px;
+}
+
+.darkTheme {
+  @extend %darkTheme;
+
+}
+
+.lightTheme {
+  @extend %lightTheme;
+}
